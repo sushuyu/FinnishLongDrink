@@ -1,0 +1,29 @@
+<Defs>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Grapefruit</defName>
+    <label>grapefruit</label>
+    <description>A delicious and fresh citrus fruit. Needed for making Finnish Long Drink, but can be eaten fresh.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Resource/Grapefruit</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+
+    <statBases>
+      <MarketValue>1.8</MarketValue>
+      <Mass>0.080</Mass>
+    </statBases>
+
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>20</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

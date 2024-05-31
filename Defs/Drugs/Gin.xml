@@ -1,0 +1,190 @@
+<Defs>
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Gin</defName>
+    <label>gin</label>
+    <description>A clear beverage needed for making Finnish Long Drink. Can be drunk on its own, but it's not everyone's go-to.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Drug/Gin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+
+    <stackLimit>25</stackLimit>
+
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>20</MarketValue>
+      <Mass>0.3</Mass>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.07</Nutrition>
+    </statBases>
+
+    <costList>
+      <Wort>5</Wort>
+    </costList>
+
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.18</joy>
+      <drugCategory>Social</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <chairSearchRadius>25</chairSearchRadius>
+      <nurseable>true</nurseable>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GinHigh</hediffDef>
+          <severity>0.20</severity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.09</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.020</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>10</listOrder>
+      </li>
+    </comps>
+
+    <recipeMaker>
+      <researchPrerequisite>Gin</researchPrerequisite>
+      <recipeUsers>
+        <li>Brewery</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>GinHigh</defName>
+    <label>Gin intoxication</label>
+    <labelNoun>Gin intoxication</labelNoun>
+    <description>Strong, see-through liquid. Often mistaken for water.</description>
+    <hediffClass>Hediff_Alcohol</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.40</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+
+    <stages>
+      <li>
+        <label>it's just water</label>
+        <painFactor>0.8</painFactor>
+        <restFallFactor>0.10</restFallFactor>
+        <socialFightChanceFactor>1.2</socialFightChanceFactor>
+
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.01</offset>
+          </li>
+        </capMods>
+      </li>
+      
+      <li>
+        <minSeverity>0.23</minSeverity>
+        <label>was it really just water? (tipsy)</label>
+        <painFactor>0.6</painFactor>
+        <socialFightChanceFactor>2.0</socialFightChanceFactor>
+
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.04</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>i dont think it was water.. (drunk)</label>
+        <painFactor>0.6</painFactor>
+        <socialFightChanceFactor>3.6</socialFightChanceFactor>
+        <vomitMtbDays>0.55</vomitMtbDays>
+        <tale>Drunk</tale>
+
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.12</offset>
+          </li>
+        </capMods>
+      </li>
+
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>definitely wasn't water. (hammered)</label>
+        <painFactor>0.3</painFactor>
+        <socialFightChanceFactor>4.8</socialFightChanceFactor>
+        <vomitMtbDays>0.2</vomitMtbDays>
+        <painOffset>0.07</painOffset>
+
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.55</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.13</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+
+      <li>
+        <minSeverity>0.9</minSeverity>
+        <label>*silence* (blackout)</label>
+        <painFactor>0.08</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>ChemicalDamageModerate</hediff>
+            <mtbDays>10</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

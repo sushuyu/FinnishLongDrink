@@ -1,0 +1,10 @@
+<ModMetaData>
+  <name>Finnish Long Drink</name>
+  <description>A mod that adds Finnish Long Drink to the game, as well as research for Grapefruits and Gin. Cause you know, you need those to make Long Drinks. Suomi mainittu!</description>
+  <author>sooshi</author>
+  <supportedVersions>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>sooshi.finnishlongdrink</packageId>
+</ModMetaData>

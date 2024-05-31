@@ -1,0 +1,14 @@
+<Defs>
+  <ResearchProjectDef>
+    <defName>GrapefruitTree</defName>
+    <label>grapefruit tree</label>
+    <description>Sow grapefruit trees in order to make Finnish Long Drink. Eating grapefruit on its own works as a food as well.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0.75</researchViewY>
+    <prerequisites>
+    <li>TreeSowing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>
