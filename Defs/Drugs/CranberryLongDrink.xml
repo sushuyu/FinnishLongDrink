@@ -1,0 +1,65 @@
+<Defs>
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>CranberryLongDrink</defName>
+    <label>Cranberry long drink</label>
+    <description>A cranberry flavoured Finnish Long Drink. You can never have too many flavours of that. Perkele.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Drug/CranberryLongDrink</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+
+    <stackLimit>50</stackLimit>
+
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>17</MarketValue>
+      <Mass>0.2</Mass>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Flammability>0.3</Flammability>
+      <Nutrition>0.09</Nutrition>
+    </statBases>
+
+    <costList>
+      <Gin>2</Gin>
+      <Cranberries>6</Cranberries>
+    </costList>
+
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.25</joy>
+      <drugCategory>Social</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <chairSearchRadius>25</chairSearchRadius>
+      <nurseable>true</nurseable>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>LongDrinkHigh</hediffDef>
+          <severity>0.20</severity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.09</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.015</addictiveness>
+        <minToleranceToAddict>0.18</minToleranceToAddict>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>10</listOrder>
+      </li>
+    </comps>
+
+    <recipeMaker>
+      <researchPrerequisite>FinnishLongDrink</researchPrerequisite>
+      <recipeUsers>
+        <li>Brewery</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

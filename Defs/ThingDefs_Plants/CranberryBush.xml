@@ -1,0 +1,51 @@
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>CranberryBush</defName>
+    <label>cranberry plant</label>
+    <description>An evergreen shrub that produces small, tart berries. Provides an alright amount of nutrition.</description>
+
+    <graphicData>
+      <texPath>Things/Plant/CranberryBush</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+				<volume>(0.55, 0.2, 0.2)</volume>
+			</shadowData>
+    </graphicData>
+
+    <pathCost>8</pathCost>
+    <selectable>true</selectable>
+
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+      <Flammability>1.3</Flammability>
+    </statBases>
+
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible/>
+
+    <plant>
+      <fertilityMin>0.05</fertilityMin>
+
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>3.6</growDays>
+
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+
+      <topWindExposure>0.1</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/ImmatureCranberry</immatureGraphicPath>
+      <harvestWork>400</harvestWork>
+			<harvestTag>Standard</harvestTag>
+      <harvestYield>15</harvestYield>
+      <harvestedThingDef>Cranberries</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+    </plant>
+</ThingDef>
+</Defs>
