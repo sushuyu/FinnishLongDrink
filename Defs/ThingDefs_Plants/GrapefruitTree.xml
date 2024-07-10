@@ -2,7 +2,7 @@
   <ThingDef ParentName="TreeBase">
     <defName>GrapefruitTree</defName>
     <label>grapefruit tree</label>
-    <description>A fresh fruit specifically meant for Finnish Long Drinks, but also tasty on its own.</description>
+    <description>A vibrant citrus tree known for its large round fruits.</description>
 
     <graphicData>
       <texPath>Things/Plant/GrapefruitTree</texPath>
@@ -16,20 +16,19 @@
     <selectable>true</selectable>
 
     <statBases>
-      <Beauty>20</Beauty>
+      <Beauty>3</Beauty>
       <Nutrition>1.10</Nutrition>
     </statBases>
 
     <ingestible/>
 
     <plant>
-      <visualSizeRange>
-        <min>0.4</min>
-        <max>2.0</max>
-      </visualSizeRange>
-
       <dieIfLeafless>true</dieIfLeafless>
       <growDays>13</growDays>
+      <visualSizeRange>
+        <min>0.8</min>
+        <max>2.0</max>
+      </visualSizeRange>
 
       <sowMinSkill>5</sowMinSkill>
       <sowTags>

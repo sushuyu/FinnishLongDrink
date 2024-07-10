@@ -2,7 +2,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>FinnishLongDrink</defName>
     <label>finnish long drink</label>
-    <description>A delicious beverage that makes you want to dip in a lake and relax in a sauna. Tastes like soda, but the alcohol can (and will) sneak up to you. Can cause addiction, but who wouldn't want to drink this? Suomi perkele.</description>
+    <description>A delicious beverage that makes you want to dip in a lake and relax in a sauna. Tastes like grapefruit soda, but the alcohol can (and will) sneak up to you. Can cause addiction, but who wouldn't want to drink this? Suomi perkele.</description>
 
     <graphicData>
       <texPath>Things/Item/Drug/FinnishLongDrink</texPath>
