@@ -9,7 +9,7 @@
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
           <volume>(0.15, 0.3, 0.15)</volume>
-          <offset>(0,0,-0.38)</offset>
+          <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
 
@@ -27,7 +27,7 @@
       <growDays>13</growDays>
       <visualSizeRange>
         <min>0.8</min>
-        <max>2.0</max>
+        <max>2.5</max>
       </visualSizeRange>
 
       <sowMinSkill>5</sowMinSkill>

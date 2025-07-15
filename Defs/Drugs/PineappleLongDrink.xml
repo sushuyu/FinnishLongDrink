@@ -1,11 +1,11 @@
 <Defs>
   <ThingDef ParentName="MakeableDrugBase">
-    <defName>CranberryLongDrink</defName>
-    <label>cranberry long drink</label>
-    <description>A cranberry flavoured Finnish Long Drink. You can never have too many flavours of that. Perkele.</description>
+    <defName>PineappleLongDrink</defName>
+    <label>pineapple long drink</label>
+    <description>A pineapple flavoured Finnish Long Drink. It was out of stock in many stores the summer it was introduced (2023). Deservedly so.</description>
 
     <graphicData>
-      <texPath>Things/Item/Drug/CranberryLongDrink</texPath>
+      <texPath>Things/Item/Drug/PineappleLongDrink</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
 
@@ -21,8 +21,7 @@
     </statBases>
 
     <costList>
-      <Gin>1</Gin>
-      <Cranberries>6</Cranberries>
+      <Gin>2</Gin>
     </costList>
 
     <ingestible>

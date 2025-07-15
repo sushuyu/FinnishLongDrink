@@ -2,7 +2,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Gin</defName>
     <label>gin</label>
-    <description>A clear beverage needed for making Finnish Long Drink. Can be drunk on its own, but it's not everyone's go-to.</description>
+    <description>A clear beverage needed for making Finnish Long Drink. Can be drank on its own, but it's not everyone's go-to.</description>
 
     <graphicData>
       <texPath>Things/Item/Drug/Gin</texPath>
@@ -21,7 +21,7 @@
     </statBases>
 
     <costList>
-      <Wort>5</Wort>
+      <Wort>3</Wort>
     </costList>
 
     <ingestible>

@@ -1,10 +1,10 @@
 <ModMetaData>
   <name>Finnish Long Drink</name>
-  <description>A mod that adds Finnish Long Drink to the game along with needed ingredients like gin, grapefruit, and as a new addition - cranberries. Research is required to make this heavenly beverage. Suomi mainittu!</description>
   <author>sooshi</author>
+  <description>The Long Drink — or *lonkero*, as we call it in Finland — was first created in 1952 to welcome visitors attending the Summer Games in Helsinki. Commissioned by the Finnish government, the beverage company Hartwall developed this pre-mixed, ready-to-drink cocktail to help bars serve guests more efficiently. What began as a practical solution quickly became a national favorite. Today, the Finnish Long Drink stands as one of Finland’s most iconic beverages. Torille!</description>
   <supportedVersions>
-    <li>1.4</li>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <packageId>sooshi.finnishlongdrink</packageId>
 </ModMetaData>
