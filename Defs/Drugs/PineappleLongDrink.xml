@@ -55,7 +55,7 @@
     </comps>
 
     <recipeMaker>
-      <researchPrerequisite>FinnishLongDrink</researchPrerequisite>
+      <researchPrerequisite>Brewing</researchPrerequisite>
       <recipeUsers>
         <li>Brewery</li>
       </recipeUsers>

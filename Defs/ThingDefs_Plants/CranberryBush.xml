@@ -21,7 +21,6 @@
       <Flammability>1.3</Flammability>
     </statBases>
 
-    <hideAtSnowDepth>0.5</hideAtSnowDepth>
     <ingestible/>
 
     <plant>
